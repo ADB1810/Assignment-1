@@ -1,0 +1,121 @@
+Murder Mystery
+
+Step one:
+SELECT *
+FROM crime_scene_report
+ where type = 'murder'
+ and city = 'SQL City'
+ and date = '20180115'
+
+Step 2:
+SELECT *
+FROM person
+where address_street_name = 'Northwestern Dr'
+order by address_number DESC
+limit 50
+
+Step 3:
+SELECT *
+FROM person
+where address_street_name = 'Franklin Ave'
+and name like '%Annabel%'
+limit 50
+
+Step 4:
+SELECT *
+FROM person
+where id IN (14887,16371)
+limit 50
+
+Step 5:
+SELECT *
+FROM interview
+where person_id IN (14887,16371)
+limit 50
+
+Step 6:
+SELECT *
+FROM drivers_license
+where plate_number like '%H42W%'
+limit 50
+
+Step 7:
+SELECT *
+FROM drivers_license as DL
+inner join person as PR on DL.id = PR.license_id
+where plate_number like '%H42W%'
+limit 50
+
+Step 8:
+SELECT Pr.*
+FROM drivers_license as DL
+inner join person as PR on DL.id = PR.license_id
+inner join get_fit_now_member as GFM on PR.id = GFM.person_id
+where plate_number like '%H42W%'
+limit 50
+
+Step 9:
+SELECT Pr.*, GFM.*
+FROM drivers_license as DL
+inner join person as PR on DL.id = PR.license_id
+inner join get_fit_now_member as GFM on PR.id = GFM.person_id
+where plate_number like '%H42W%'
+limit 50
+
+Ckeck yor solution
+INSERT INTO solution VALUES (1, 'Jeremy Bowers');
+        
+        SELECT value FROM solution;
+
+
+Step 10:
+
+SELECT *
+from interview
+where person_id = 67318
+
+Step 11:
+SELECT PR.*
+from drivers_license as DL
+inner join person as PR on DL.id = PR.license_id
+where height >=65
+and height <=67
+and car_make = 'Tesla'
+and car_model = 'Model S'
+and gender = 'female'
+
+Step 12:
+SELECT PR.*, FBC.*
+from drivers_license as DL
+inner join person as PR on DL.id = PR.license_id
+inner join facebook_event_checkin as FBC on FBC.person_id = PR.id
+where height >=65
+and height <=67
+and car_make = 'Tesla'
+and car_model = 'Model S'
+and gender = 'female'
+
+
+INSERT INTO solution VALUES (1, 'Miranda Priestly');
+
+![Screenshot (171)](https://github.com/user-attachments/assets/6d3600ac-1db5-4896-b076-e94615e487c1)
+![Screenshot (170)](https://github.com/user-attachments/assets/0db01ae9-1967-47c7-9d41-b5a588b528e9)
+![Screenshot (169)](https://github.com/user-attachments/assets/33668dae-a90b-4438-9751-fdd4be6ca194)
+![Screenshot (168)](https://github.com/user-attachments/assets/8401a779-52f2-4489-b13d-8e0c0c0e34e9)
+![Screenshot (167)](https://github.com/user-attachments/assets/7ecde4ea-1bf1-4e12-be9e-19231853b314)
+![Screenshot (166)](https://github.com/user-attachments/assets/e10bf20b-9463-432c-9dac-60d1d7e68b71)
+![Screenshot (165)](https://github.com/user-attachments/assets/d740372b-ef81-4f9b-888d-b771c0ed1eb8)
+![Screenshot (164)](https://github.com/user-attachments/assets/6ba26a5f-ab8a-4e17-9141-a8a928ee50cf)
+![Screenshot (163)](https://github.com/user-attachments/assets/b17fe687-99c1-4d00-8ee3-8c777d7d9000)
+![Screenshot (162)](https://github.com/user-attachments/assets/34cc84a0-f625-44bb-ab5f-7a32f9a9d8ba)
+![Screenshot (161)](https://github.com/user-attachments/assets/342baa93-82ae-48df-95b5-36d34312890d)
+![Screenshot (160)](https://github.com/user-attachments/assets/9eb997b7-ff22-474c-a116-252c00a1b699)
+![Screenshot (159)](https://github.com/user-attachments/assets/3520613e-fdf8-40fb-a402-d9dac53473ad)
+![Screenshot (158)](https://github.com/user-attachments/assets/f5ec1c58-eb72-4ded-a3d5-46a849bc8d20)
+![Screenshot (157)](https://github.com/user-attachments/assets/b66da291-85e8-4d53-b264-37746ed716f5)
+![Screenshot (156)](https://github.com/user-attachments/assets/8ea912fc-93b7-428a-a9f8-46541a8d445f)
+![Screenshot (155)](https://github.com/user-attachments/assets/8dba955d-369a-477e-9299-25114942a431)
+![Screenshot (154)](https://github.com/user-attachments/assets/a14785df-3af7-4e0b-a89c-610c71f3dc1c)
+![Screenshot (153)](https://github.com/user-attachments/assets/a3daddcb-ea62-4271-80cd-e99192d5e385)
+![Screenshot (152)](https://github.com/user-attachments/assets/f51ca398-c2bb-4ea9-a705-c4df28965f4b)
+
